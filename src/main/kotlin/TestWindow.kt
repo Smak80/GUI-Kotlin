@@ -1,12 +1,11 @@
 import java.awt.Dimension
-import java.awt.Point
 import javax.swing.GroupLayout
 import javax.swing.JButton
 import javax.swing.JFrame
 import javax.swing.JLabel
 import javax.swing.JTextField
 
-class MainWindow : JFrame() {
+class TestWindow : JFrame() {
     val minSize = Dimension(600, 450)
 
     val btn = JButton()
@@ -18,6 +17,7 @@ class MainWindow : JFrame() {
         defaultCloseOperation = EXIT_ON_CLOSE
 
         btn.text = "Нажми меня"
+        btn.addActionListener{ lblResult.text = tf.text }
         lblResult.text = "Здесь будет текст пользователя"
 
         val gl = GroupLayout(contentPane)
